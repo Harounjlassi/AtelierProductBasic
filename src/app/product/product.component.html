@@ -1,4 +1,4 @@
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;"  *ngIf="product.price<priceMax || priceMax==null">
         <img src="../../assets/t.jpg" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{product.title}}</h5>
