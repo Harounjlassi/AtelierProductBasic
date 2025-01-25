@@ -9,7 +9,6 @@
 
     </div>
 </form>
-<p>{{priceMax}}</p>
 
 <!-- <table border="2">
     <tr>
@@ -28,6 +27,13 @@
             </tr>
         </tbody>
 </table> -->
-<app-product *ngFor="let p of listProduct " [product]="p">
 
-</app-product>
+<div class="container overflow-hidden text-center">
+
+<div class="row gx-5">
+    <div class="col" *ngFor="let p of listProduct">
+      <app-product [product]="p"></app-product>
+    </div>
+  </div>
+  </div>
+  
