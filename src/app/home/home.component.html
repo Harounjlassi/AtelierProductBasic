@@ -32,7 +32,9 @@
 
 <div class="row gx-5">
     <div class="col" *ngFor="let p of listProduct">
-      <app-product [product]="p"></app-product>
+      <app-product [product]="p" (notification)="incrementLike($event)">
+
+      </app-product>
     </div>
   </div>
   </div>

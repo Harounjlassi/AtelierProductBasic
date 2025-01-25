@@ -22,8 +22,9 @@ export class HomeComponent implements OnInit {
    
     ];
   }
-  incrementLike(i:number){
+  incrementLike(product:Product){
     //increment the liek of the products
+    let i = this.listProduct.indexOf(product);
     this.listProduct[i].like++;
 
 

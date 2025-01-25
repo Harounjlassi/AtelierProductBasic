@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../model/product';
 
 @Component({
@@ -8,10 +8,15 @@ import { Product } from '../model/product';
 })
 export class ProductComponent implements OnInit {
   @Input() product!:Product ;
+  @Output() notification = new EventEmitter<Product>();
  ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
   
+ }
+ sendNotif(){
+  this.notification.emit(this.product);
+
  }  
 
 }
