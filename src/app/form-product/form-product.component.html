@@ -11,12 +11,13 @@
     <div class="form-group">
 
         <label for="">Titre:</label>
-        <input type="text"  name="title" class="form-control"  [(ngModel)]="product.title"  #t="ngModel" required minlength="3">
+        <input type="text"  name="title" class="form-control"  [(ngModel)]="product.title"  #t="ngModel" 
+         minlength="3"pattern="^[a-zA-Z]+$" required>
         <div class="alert alert-danger" *ngIf="t.invalid">
             <div *ngIf="t?.errors?.['required']">Title is required</div>
             <div *ngIf="t?.errors?.['minlength']">Title minlength is 3</div>
-            
-      
+            <div *ngIf="t?.errors?.['pattern']">Error Pattern </div>
+
         </div>
     </div>
     <button class="btn btn-success" [disabled]="f.invalid">Save</button>
