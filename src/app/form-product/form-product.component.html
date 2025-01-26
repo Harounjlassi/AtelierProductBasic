@@ -5,6 +5,9 @@
 
         <input type="number" name="id" class="form-control" [(ngModel)]="product.id" required>
     </div>
+    <div class="alert alert-danger"  [hidden]="f.invalid">
+        id is required
+    </div>
     <button class="btn btn-success" [disabled]="f.invalid">Save</button>
 </form>
 <br>
