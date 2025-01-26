@@ -1,1 +1,10 @@
 <h1>Add Product</h1>
+<form action="" #f="ngForm">
+    <div class="form-group">
+        <label for="">Id:</label>
+
+        <input type="number" name="id" class="form-control" [(ngModel)]="product.id" required>
+    </div>
+    <button class="btn btn-success" [disabled]="f.invalid">Save</button>
+</form>
+<br>
