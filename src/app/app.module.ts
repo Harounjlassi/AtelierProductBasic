@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { FormProductComponent } from './form-product/form-product.component';
+import { ReactieFormComponent } from './reactie-form/reactie-form.component';
 
 
 @NgModule({
@@ -13,11 +14,13 @@ import { FormProductComponent } from './form-product/form-product.component';
     AppComponent,
     HomeComponent,
     ProductComponent,
-    FormProductComponent
+    FormProductComponent,
+    ReactieFormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

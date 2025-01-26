@@ -1,0 +1,11 @@
+<h1>Reactive Form</h1>
+<form [formGroup]="registerForm">
+    <div class="from-group">
+        <label for="">First Name</label>
+        <input type="text" formControlName="firstName" class="form-control">
+
+    </div>
+ 
+</form>
+<p>value: {{registerForm.get('firstName')?.value}}</p>
+<!-- <p>status: {{name.status}}</p> -->
