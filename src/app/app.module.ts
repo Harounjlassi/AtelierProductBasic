@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { FormProductComponent } from './form-product/form-product.component';
 import { ReactieFormComponent } from './reactie-form/reactie-form.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     ProductComponent,
     FormProductComponent,
-    ReactieFormComponent
+    ReactieFormComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

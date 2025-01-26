@@ -9,22 +9,25 @@
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/product">Home Product</a>
+                <a class="nav-link " routerLink="/product">Home Product</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/reactive">Reactive Form</a>
+                <a class="nav-link" routerLink="/reactive">Reactive Form</a>
               </li>
            
               <li class="nav-item">
-                <a class="nav-link " href="/dirivenForm">Template Diriven From</a>
+                <a class="nav-link " routerLink="/dirivenForm">Template Diriven From</a>
               </li>
             </ul>
           
           </div>
         </div>
       </nav>
-      <app-reactie-form></app-reactie-form>
+
+      <router-outlet></router-outlet>
+      
+      <!-- <app-reactie-form></app-reactie-form>
       <br>   
-    <app-home></app-home>
+    <app-home></app-home> -->
 </div>
 
