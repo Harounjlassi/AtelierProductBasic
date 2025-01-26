@@ -15,9 +15,20 @@ export class ReactieFormComponent implements OnInit{
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.registerForm=new FormGroup({firstName:new FormControl('haroun',Validators.required)});
+    this.registerForm=new FormGroup({firstName:new FormControl('',Validators.required),
+    lastName:new FormControl('',Validators.required),
+    adress: new FormGroup({
+      street: new FormControl('',Validators.required),
+      city: new FormControl('',Validators.required),
+    })
+    });  
 
-    
+  }
+  onSubmit(){
+    console.log(this.registerForm.value);
+  }
+  reset(){
+    this.registerForm.reset();
   }
 
 

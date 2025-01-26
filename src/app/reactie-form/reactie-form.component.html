@@ -1,11 +1,33 @@
 <h1>Reactive Form</h1>
-<form [formGroup]="registerForm">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="from-group">
         <label for="">First Name</label>
         <input type="text" formControlName="firstName" class="form-control">
 
     </div>
- 
+
+    <div class="from-group">
+        <label for="">Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control">
+
+    </div>
+    <h3>Address</h3>
+    <div formGroupName="adress">
+
+        <div class="from-group">
+            <label for="">Street:</label>
+            <input type="text" formControlName="street" class="form-control">
+            
+        </div>
+        
+        <div class="from-group">
+            <label for="">City:</label>
+            <input type="text" formControlName="city" class="form-control">
+            
+        </div>
+    </div>
+    <button type="submit" class="btn btn-danger" (click)="reset()">Cancel</button>
+ <button type="submit" class="btn btn-success" [disabled]="registerForm.invalid">Submit</button>
 </form>
-<p>value: {{registerForm.get('firstName')?.value}}</p>
+<!-- <p>value: {{registerForm.get('firstName')?.value}}</p> -->
 <!-- <p>status: {{name.status}}</p> -->
