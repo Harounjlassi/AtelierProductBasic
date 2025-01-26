@@ -5,7 +5,7 @@
 
         <input type="number" name="id" class="form-control" [(ngModel)]="product.id" #i="ngModel" required>
     </div>
-    <div class="alert alert-danger" *ngIf="i.invalid">
+    <div class="alert alert-danger" *ngIf="i.invalid && i.touched">
         id is required
     </div>
     <div class="form-group">
@@ -13,7 +13,7 @@
         <label for="">Titre:</label>
         <input type="text"  name="title" class="form-control"  [(ngModel)]="product.title"  #t="ngModel" 
          minlength="3"pattern="^[a-zA-Z]+$" required>
-        <div class="alert alert-danger" *ngIf="t.invalid">
+        <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
             <div *ngIf="t?.errors?.['required']">Title is required</div>
             <div *ngIf="t?.errors?.['minlength']">Title minlength is 3</div>
             <div *ngIf="t?.errors?.['pattern']">Error Pattern </div>
