@@ -39,6 +39,6 @@
             Price is required
         </div>
     </div>
-    <button class="btn btn-success" [disabled]="f.invalid || q.value < 0">Save</button>
+    <button class="btn btn-success" [disabled]="f.invalid || q.value < 0" (click)="save()">Save</button>
 </form>
 <br>

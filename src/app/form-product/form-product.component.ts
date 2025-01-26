@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from '../model/product';
 
 @Component({
@@ -8,11 +8,17 @@ import { Product } from '../model/product';
 })
 export class FormProductComponent implements OnInit {
 product!:Product;
+@Output() eventSaveProduct= new EventEmitter<Product>();
 
 ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnInit' to the class.
   this.product= new Product();
   
+}
+save(){
+  this.product.like=0;
+  this.eventSaveProduct.emit(this.product);
+
 }
 }

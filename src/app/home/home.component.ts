@@ -29,5 +29,8 @@ export class HomeComponent implements OnInit {
 
 
   }
+  pushProduct(product:Product){
+    this.listProduct.push(product);
+  }
 
 }
