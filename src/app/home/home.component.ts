@@ -11,9 +11,11 @@ export class HomeComponent implements OnInit {
   listProduct!:Product[];
   // two binding
   priceMax!:number;
+  hideForm!:boolean;
 
   constructor(){}
   ngOnInit(): void {
+    this.hideForm=true;
     this.title ='E-Commerce';
     this.listProduct=[
       {id:1,title:'T-Shirt 1',price:20,quantity: 5,like:0},
@@ -31,6 +33,9 @@ export class HomeComponent implements OnInit {
   }
   pushProduct(product:Product){
     this.listProduct.push(product);
+  }
+  showForm(){
+    this.hideForm=!this.hideForm;
   }
 
 }

@@ -9,9 +9,10 @@
 
     </div>
 </form>
-<app-form-product (eventSaveProduct)="pushProduct($event)">
-
-</app-form-product>
+<button class="btn btn-warning" (click)="showForm()">Add New product</button>
+    <app-form-product (eventSaveProduct)="pushProduct($event)" [hidden]="hideForm">
+        
+    </app-form-product>
 <!-- <table border="2">
     <tr>
         <th>id</th><th>title</th><th>price</th><th>quantity</th><th>like</th>
