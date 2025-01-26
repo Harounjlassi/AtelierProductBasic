@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { FormProductComponent } from './form-product/form-product.component';
 import { ReactieFormComponent } from './reactie-form/reactie-form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReactieFormComponent } from './reactie-form/reactie-form.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
