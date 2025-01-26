@@ -26,9 +26,12 @@ export class ReactieFormComponent implements OnInit{
   }
   onSubmit(){
     console.log(this.registerForm.value);
+        //display form values on succces 
+        alert('SUCCESS\n\n'+ JSON.stringify(this.registerForm.value,null,4));
   }
   reset(){
     this.registerForm.reset();
+
   }
 
 
