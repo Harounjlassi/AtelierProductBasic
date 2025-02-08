@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../model/todo';
+import { CalculService } from '../services/calcul.service';
 
 @Component({
   selector: 'app-list-todo',
@@ -8,7 +9,8 @@ import { Todo } from '../model/todo';
 })
 export class ListTodoComponent implements OnInit {
   todolist:Todo[]=[];
-  constructor() { }
+  statNumbers:number = 0;
+  constructor( private Cal: CalculService) { }
 
   ngOnInit(): void {
     this.todolist=[
@@ -20,6 +22,9 @@ export class ListTodoComponent implements OnInit {
       {"userId": 1, "id": 4, "title": "quo adipisci enim quam ut ab", 
       "completed": true}];
   }
-
+stat(){
+ this.statNumbers = this.Cal.getStat(this.todolist,"completed",true);
+ console.log(this.statNumbers);
+}
 
 }
