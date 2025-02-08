@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../model/product';
 import { ProductService } from '../services/product.service'; // Import the correct service//+
+import { CalculService } from '../services/calcul.service';
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,8 @@ export class HomeComponent implements OnInit {
   // two binding
   priceMax!:number;
   hideForm!:boolean;
-
-  constructor( private servcieproduct:ProductService){}
+  statNumbers!:number;
+  constructor( private servcieproduct:ProductService,private Cal:CalculService){}
   ngOnInit(): void {
     this.hideForm=true;
     this.title ='E-Commerce';
@@ -33,5 +34,13 @@ export class HomeComponent implements OnInit {
   showForm(){
     this.hideForm=!this.hideForm;
   }
+  stat(){
+
+    this.statNumbers = this.Cal.getStat(this.listProduct,"quantity",0);
+    console.log(this.statNumbers);
+  }
+
+
+
 
 }

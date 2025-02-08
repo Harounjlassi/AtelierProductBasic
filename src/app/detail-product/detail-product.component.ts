@@ -21,6 +21,7 @@ export class DetailProductComponent implements OnInit {
     //Add 'implements OnInit' to the class.
     console.log(this.serviceroute.snapshot.params['id']);
     this.products = this.seviceproduct.getProducts();
+
   }
 
 }
