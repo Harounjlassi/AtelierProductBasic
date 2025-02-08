@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../model/product';
+import { ProductService } from '../services/product.service'; // Import the correct service//+
 
 @Component({
   selector: 'app-home',
@@ -13,16 +14,11 @@ export class HomeComponent implements OnInit {
   priceMax!:number;
   hideForm!:boolean;
 
-  constructor(){}
+  constructor( private servcieproduct:ProductService){}
   ngOnInit(): void {
     this.hideForm=true;
     this.title ='E-Commerce';
-    this.listProduct=[
-      {id:1,title:'T-Shirt 1',price:20,quantity: 5,like:0},
-      {id:2,title:'T-Shirt 2',price:5,quantity: 0,like:0},
-      {id:3,title:'T-Shirt 3',price:3,quantity: 12,like:0},
-   
-    ];
+    this.listProduct= this.servcieproduct.getProducts();
   }
   incrementLike(product:Product){
     //increment the liek of the products
