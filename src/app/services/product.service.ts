@@ -17,4 +17,8 @@ export class ProductService {
     ];
     
   }
+ 
+  getProductById(id:number){
+    return this.listProduct.find(p=>p.id==id);
+  }
 }

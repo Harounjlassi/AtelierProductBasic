@@ -10,6 +10,7 @@ import { ReactieFormComponent } from './reactie-form/reactie-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { ListTodoComponent } from './list-todo/list-todo.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DetailProductComponent } from './detail-product/detail-product.componen
     FormProductComponent,
     ReactieFormComponent,
     PageNotFoundComponent,
-    DetailProductComponent
+    DetailProductComponent,
+    ListTodoComponent
   ],
   imports: [
     BrowserModule,
