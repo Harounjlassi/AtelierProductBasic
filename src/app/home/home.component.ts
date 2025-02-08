@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../model/product';
 
 @Component({
@@ -8,7 +8,7 @@ import { Product } from '../model/product';
 })
 export class HomeComponent implements OnInit {
   title!: string;
-  listProduct!:Product[];
+ listProduct!:Product[];
   // two binding
   priceMax!:number;
   hideForm!:boolean;

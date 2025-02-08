@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Product } from '../model/product';
 
 @Component({
   selector: 'app-detail-product',
@@ -7,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./detail-product.component.css']
 })
 export class DetailProductComponent implements OnInit {
+   products:Product[]=[];
+  product!:Product;
+
   constructor(private serviceroute:ActivatedRoute) {
 
 
@@ -15,6 +19,7 @@ export class DetailProductComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     console.log(this.serviceroute.snapshot.params['id']);
+    this.product = this.products[2];
     
   }
 
