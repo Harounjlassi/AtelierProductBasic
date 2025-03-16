@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,9 @@ export class ReactieFormComponent implements OnInit{
   registerForm!: FormGroup;
   constructor(){}
 
+  @Injectable({
+    providedIn: 'root'
+  })
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
@@ -36,4 +39,6 @@ export class ReactieFormComponent implements OnInit{
 
 
 
+
 }
+
